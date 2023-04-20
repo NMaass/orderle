@@ -7,7 +7,7 @@ const topicData = [
   },
   {
     title: "American Animals",
-    desciption: "Animals native to America",
+    desciption: "Native to America",
     prompt: "Arrange smallest to largest",
     items: [
       "Mink",
