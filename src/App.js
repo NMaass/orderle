@@ -81,7 +81,7 @@ const App = () => {
         ...columnData.columns,
         reorder: {
           ...columnData.columns.reorder,
-          title: data.title,
+          title: data.desciption,
           itemIds: data.items,
           correctItems: data.items.slice(0, 5),
         },
