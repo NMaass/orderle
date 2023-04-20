@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.wideCard {
+  height: 14vw;
+  width: 80vw;
+  margin-bottom: 2vw;
+}
+.tallCard {
+  height: 40vw;
+  width: 80vw;
+  margin-bottom: 2vw;
+}
