@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/orderle/static/css/main.e47f15e9.css",
+    "main.css": "/orderle/static/css/main.4fcd29eb.css",
     "main.js": "/orderle/static/js/main.0fc6248f.js",
     "index.html": "/orderle/index.html",
-    "main.e47f15e9.css.map": "/orderle/static/css/main.e47f15e9.css.map",
+    "main.4fcd29eb.css.map": "/orderle/static/css/main.4fcd29eb.css.map",
     "main.0fc6248f.js.map": "/orderle/static/js/main.0fc6248f.js.map"
   },
   "entrypoints": [
-    "static/css/main.e47f15e9.css",
+    "static/css/main.4fcd29eb.css",
     "static/js/main.0fc6248f.js"
   ]
 }
