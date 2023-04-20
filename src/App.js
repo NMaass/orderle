@@ -4,9 +4,13 @@ import { DragDropContext } from "react-beautiful-dnd";
 import columns from "./assets/columns";
 import ReorderableColumn from "./components/ReorderableColumn";
 import TopicSelection from "./components/TopicSelection";
+import ItemSelection from "./components/ItemSelection";
 
 const App = () => {
   const [columnData, setColumnData] = useState(columns);
+  const [showTopics, setShowTopics] = useState(true);
+  const [showSelction, setShowSelection] = useState(false);
+  const [showOrdering, setShowOrdering] = useState(false);
 
   const onDragEnd = ({ destination, source, draggableId }) => {
     if (!destination) {
@@ -70,7 +74,7 @@ const App = () => {
     setColumnData(newData);
   };
 
-  const setColumnItems = (data) => {
+  const setColumnTopic = (data) => {
     const newData = {
       ...columnData,
       columns: {
@@ -79,17 +83,45 @@ const App = () => {
           ...columnData.columns.reorder,
           title: data.title,
           itemIds: data.items,
+          correctItems: data.items.slice(0, 5),
         },
       },
     };
     console.log(newData);
     setColumnData(newData);
+    setShowTopics(false);
+    setShowSelection(true);
+  };
+
+  const setColumnItems = (data) => {
+    const newData = {
+      ...columnData,
+      columns: {
+        ...columnData.columns,
+        reorder: {
+          ...columnData.columns.reorder,
+          itemIds: data,
+        },
+      },
+    };
+    console.log(newData);
+    setColumnData(newData);
+    setShowSelection(false);
+    setShowOrdering(true);
   };
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <TopicSelection setColumn={setColumnItems} />
-      {/* <ReorderableColumn column={columnData.columns.reorder} /> */}
+      {showTopics && <TopicSelection setColumn={setColumnTopic} />}
+      {showSelction && (
+        <ItemSelection
+          column={columnData.columns.reorder}
+          goNext={setColumnItems}
+        />
+      )}
+      {showOrdering && (
+        <ReorderableColumn column={columnData.columns.reorder} />
+      )}
     </DragDropContext>
   );
 };
