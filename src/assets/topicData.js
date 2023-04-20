@@ -20,6 +20,36 @@ const topicData = [
       "Wild Boar",
     ],
   },
+  {
+    title: "World War 2 Battles",
+    desciption: "World War 2 Battles",
+    prompt: "Arrange first to last",
+    items: [
+      "Battle of Dunkirk",
+      "Battle of Crete",
+      "Battle of Midway",
+      "Battle of Normandy",
+      "Battle of the Bulge",
+      "Battle of Verdun",
+      "Battle of the Somme",
+      "Battle of Passchendaele",
+    ],
+  },
+  {
+    title: "Algorithm Design",
+    desciption: "Algorithm Design Steps",
+    prompt: "Arrange first to last",
+    items: [
+      "Understand the problem",
+      "Design the algorithm",
+      "Prove correctness",
+      "Analyze the algorithm",
+      "Code the algorithm",
+      "Draw a flow diagram",
+      "Compare to existing solutions",
+      "Document algorithm",
+    ],
+  },
 ];
 
 export default topicData;
