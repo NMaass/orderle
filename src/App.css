@@ -41,8 +41,13 @@
   width: 80vw;
   margin: 2vw;
 }
+.card {
+  height: 20vw;
+  width: 80vw;
+  margin: 2vw;
+}
 .tallCard {
   height: 40vw;
   width: 80vw;
-  margin-bottom: 2vw;
+  margin: 2vw;
 }

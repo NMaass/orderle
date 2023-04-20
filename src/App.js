@@ -84,6 +84,7 @@ const App = () => {
           title: data.desciption,
           itemIds: data.items,
           correctItems: data.items.slice(0, 5),
+          prompt: data.prompt,
         },
       },
     };
